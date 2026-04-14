@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جميع الخدمات | الاستثمار الأولى</title>
+
+  <meta name="description" content="استعرض جميع خدمات الاستثمار الأولى التجارية والبلدية والحكومية والزكوية والاستثمارية في السعودية.">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root{
+      --primary:#195cab;
+      --secondary:#2bc58a;
+      --dark:#1f2937;
+      --light:#f8fafc;
+      --white:#fff;
+      --border:#e5e7eb;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --radius:18px;
+    }
+
+    *{
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:'Cairo',sans-serif;
+      background:var(--light);
+      color:var(--dark);
+      direction:rtl;
+      line-height:1.8;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(1200px,92%);
+      margin:auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(25,92,171,.96);
+      backdrop-filter:blur(10px);
+      box-shadow:0 4px 18px rgba(0,0,0,.08);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 0;
+      gap:20px;
+    }
+
+    .logo{
+      color:#fff;
+      font-size:1.5rem;
+      font-weight:800;
+    }
+
+    nav{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:#fff;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    nav a:hover{
+      color:#d9f8ec;
+    }
+
+    .back-btn{
+      background:#fff;
+      color:var(--primary);
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:700;
+    }
+
+    .hero{
+      background:
+      linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+      url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+      color:#fff;
+      text-align:center;
+      padding:90px 20px 70px;
+    }
+
+    .hero h1{
+      margin:0 0 14px;
+      font-size:clamp(2rem,4vw,3rem);
+      font-weight:800;
+    }
+
+    .hero p{
+      margin:auto;
+      max-width:700px;
+      color:#eef2f7;
+      font-size:1.05rem;
+    }
+
+    .quick-links{
+      margin-top:35px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .quick-links a{
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.15);
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:700;
+      transition:.3s;
+    }
+
+    .quick-links a:hover{
+      background:var(--secondary);
+      border-color:var(--secondary);
+    }
+
+    section{
+      padding:70px 0;
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:25px;
+      font-size:1.9rem;
+      color:var(--primary);
+      font-weight:800;
+    }
+
+    .section-title i{
+      color:var(--secondary);
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+
+    .service-card{
+      background:#fff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      border:1px solid #edf2f7;
+      padding:24px;
+      transition:.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-4px);
+    }
+
+    .service-card h3{
+      margin:0 0 12px;
+      color:var(--dark);
+      font-size:1.15rem;
+    }
+
+    .service-card p{
+      margin:0 0 18px;
+      color:#6b7280;
+      font-size:.95rem;
+    }
+
+    .service-card ul{
+      list-style:none;
+      padding:0;
+      margin:0 0 18px;
+    }
+
+    .service-card ul li{
+      padding:8px 0;
+      border-bottom:1px dashed var(--border);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      font-size:.95rem;
+    }
+
+    .service-card ul li:last-child{
+      border-bottom:none;
+    }
+
+    .service-card ul li i{
+      color:var(--secondary);
+      font-size:.85rem;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:var(--secondary);
+      color:#fff;
+      padding:12px 18px;
+      border-radius:10px;
+      font-weight:700;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      opacity:.92;
+    }
+
+    .cta{
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff;
+      border-radius:24px;
+      padding:40px;
+      text-align:center;
+      margin-top:30px;
+    }
+
+    .cta h2{
+      margin:0 0 12px;
+      font-size:2rem;
+    }
+
+    .cta p{
+      max-width:650px;
+      margin:0 auto 20px;
+      color:#f0fdf4;
+    }
+
+    footer{
+      background:#020617;
+      color:#cbd5e1;
+      text-align:center;
+      padding:22px;
+      margin-top:70px;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      bottom:20px;
+      left:20px;
+      width:58px;
+      height:58px;
+      background:#25d366;
+      color:#fff;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.7rem;
+      box-shadow:0 10px 24px rgba(0,0,0,.2);
+      z-index:2000;
+    }
+
+    @media(max-width:900px){
+      .services-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:768px){
+      .nav{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      nav{
+        width:100%;
+      }
+
+      .quick-links{
+        flex-direction:column;
+      }
+
+      .section-title{
+        font-size:1.5rem;
+      }
+
+      .service-card ul li{
+        flex-direction:row;
+        align-items:flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">الاستثمار الأولى</div>
+
+    <nav>
+      <a href="#commercial">الخدمات التجارية</a>
+      <a href="#municipal">خدمات البلدية</a>
+      <a href="#government">الخدمات الحكومية</a>
+      <a href="#tax">الخدمات الزكوية</a>
+      <a href="#investment">الخدمات الاستثمارية</a>
+      <a href="index.html" class="back-btn">العودة للرئيسية</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>جميع خدمات الاستثمار الأولى</h1>
+    <p>
+      اختر القسم المناسب لك، ثم تواصل معنا مباشرة عبر واتساب لبدء الخدمة أو الحصول على استشارة مجانية.
+    </p>
+
+    <div class="quick-links">
+      <a href="#commercial">الخدمات التجارية</a>
+      <a href="#municipal">خدمات البلدية</a>
+      <a href="#government">الخدمات الحكومية</a>
+      <a href="#tax">الخدمات الزكوية والضريبية</a>
+      <a href="#investment">الخدمات الاستثمارية</a>
+    </div>
+  </div>
+</section>
+
+<section id="commercial">
+  <div class="container">
+    <div class="section-title">
+      <i class="fa-solid fa-building"></i>
+      <span>الخدمات التجارية</span>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>تأسيس الشركات والسجل التجاري</h3>
+        <p>خدمات تأسيس الشركات وإصدار السجل التجاري والتعديلات المرتبطة به.</p>
+        <ul>
+          <li><span>قيد سجل تجاري لمؤسسة فردية</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تأسيس شركة ذات مسؤولية محدودة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تأسيس شركة مساهمة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تأسيس شركة مساهمة مبسطة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>التحول من مؤسسة فردية إلى شركة</span><i class="fa-solid fa-circle-check"></i></li>
+        </ul>
+        <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> اطلب الخدمة
+        </a>
+      </div>
+
+      <div class="service-card">
+        <h3>الاسم التجاري والتعديلات</h3>
+        <p>خدمات حجز وتعديل ونقل الاسم التجاري وتحديث بيانات السجل.</p>
+        <ul>
+          <li><span>حجز اسم تجاري</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تمديد حجز اسم تجاري</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>التنازل عن الاسم التجاري</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تعديل بيانات السجل التجاري</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تحديث بيانات مالك السجل التجاري</span><i class="fa-solid fa-circle-check"></i></li>
+        </ul>
+        <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> اطلب الخدمة
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="municipal">
+  <div class="container">
+    <div class="section-title">
+      <i class="fa-solid fa-city"></i>
+      <span>خدمات البلدية</span>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>الرخص التجارية</h3>
+        <p>إصدار وتجديد وتعديل وإلغاء الرخص التجارية للمنشآت.</p>
+        <ul>
+          <li><span>إصدار رخصة تجارية</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تجديد رخصة تجارية</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تعديل رخصة نشاط تجاري</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إلغاء رخصة نشاط تجاري</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>نقل ملكية رخصة تجارية</span><i class="fa-solid fa-circle-check"></i></li>
+        </ul>
+        <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> اطلب الخدمة
+        </a>
+      </div>
+
+      <div class="service-card">
+        <h3>التصاريح والاعتراضات</h3>
+        <p>خدمات التصاريح البلدية والاعتراضات على الرخص والمخالفات.</p>
+        <ul>
+          <li><span>تصريح إعلاني مؤقت</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تصريح بالأنشطة التجارية 24 ساعة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>خدمة الاعتراض على رسوم الإلغاء</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>خدمة تقديم طلب حذف رخص مكررة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إصدار تقرير فني وترخيص سلامة</span><i class="fa-solid fa-circle-check"></i></li>
+        </ul>
+        <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> اطلب الخدمة
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="government">
+  <div class="container">
+    <div class="section-title">
+      <i class="fa-solid fa-landmark"></i>
+      <span>الخدمات الحكومية</span>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>التأشيرات والعمل</h3>
+        <p>خدمات التأشيرات، رخص العمل، ونقل العمالة.</p>
+        <ul>
+          <li><span>إصدار تأشيرة عمل</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إصدار تأشيرة زيارة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إصدار رخصة عمل</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>نقل عامل من مؤسسة إلى مؤسسة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تعديل المهنة للموظفين</span><i class="fa-solid fa-circle-check"></i></li>
+        </ul>
+        <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> اطلب الخدمة
+        </a>
+      </div>
+
+      <div class="service-card">
+        <h3>التأمينات والعقود</h3>
+        <p>حل مشاكل التأمينات، العقود، وشهادات الالتزام.</p>
+        <ul>
+          <li><span>إنشاء عقود العمل للموظفين</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تسجيل موظف في التأمينات</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>الاعتراض على مخالفة التأمينات</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إصدار شهادة التوطين</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تسوية ودية بين العامل وصاحب العمل</span><i class="fa-solid fa-circle-check"></i></li>
+        </ul>
+        <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> اطلب الخدمة
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tax">
+  <div class="container">
+    <div class="section-title">
+      <i class="fa-solid fa-file-invoice-dollar"></i>
+      <span>الخدمات الزكوية والضريبية</span>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>الزكاة والإقرارات</h3>
+        <p>خدمات التسجيل في الزكاة والإقرارات والشهادات الزكوية.</p>
+        <ul>
+          <li><span>التسجيل في الزكاة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تقديم الإقرار الزكوي</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إصدار شهادة الزكاة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إصدار الرقم المميز</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إضافة أو إلغاء فرع في الزكاة</span><i class="fa-solid fa-circle-check"></i></li>
+        </ul>
+        <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> اطلب الخدمة
+        </a>
+      </div>
+
+      <div class="service-card">
+        <h3>ضريبة القيمة المضافة والاعتراضات</h3>
+        <p>تسجيل ضريبة القيمة المضافة، الإقرارات، والغرامات.</p>
+        <ul>
+          <li><span>التسجيل في ضريبة القيمة المضافة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تقديم إقرار ضريبة القيمة المضافة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تعديل إقرار ضريبة القيمة المضافة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>طلب اعتراض على غرامة</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إلغاء التسجيل في ضريبة القيمة المضافة</span><i class="fa-solid fa-circle-check"></i></li>
+        </ul>
+        <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> اطلب الخدمة
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="investment">
+  <div class="container">
+    <div class="section-title">
+      <i class="fa-solid fa-chart-line"></i>
+      <span>الخدمات الاستثمارية</span>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>التراخيص الاستثمارية</h3>
+        <p>إصدار وتجديد التراخيص الاستثمارية للمقيمين وغير المقيمين.</p>
+        <ul>
+          <li><span>إصدار ترخيص استثماري</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إصدار ترخيص لمقيم</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إصدار ترخيص لغير المقيم</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تجديد ترخيص الاستثمار</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إصدار الإقامة المميزة</span><i class="fa-solid fa-circle-check"></i></li>
+        </ul>
+        <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> اطلب الخدمة
+        </a>
+      </div>
+
+      <div class="service-card">
+        <h3>الشركات الأجنبية</h3>
+        <p>خدمات إنشاء وتصفية الشركات الأجنبية داخل المملكة.</p>
+        <ul>
+          <li><span>إنشاء شركة شخص واحد أجنبية</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إنشاء شركة أكثر من شخص أجنبية</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>إنشاء شركة مساهمة أجنبية</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>تصفية شركة أجنبية</span><i class="fa-solid fa-circle-check"></i></li>
+          <li><span>نقل عامل من فرد إلى شريك في شركة</span><i class="fa-solid fa-circle-check"></i></li>
+        </ul>
+        <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> اطلب الخدمة
+        </a>
+      </div>
+    </div>
+
+    <div class="cta">
+      <h2>هل تحتاج خدمة غير موجودة؟</h2>
+      <p>
+        لدينا خدمات إضافية كثيرة غير معروضة هنا. تواصل معنا مباشرة عبر واتساب وسنساعدك في اختيار الخدمة المناسبة.
+      </p>
+
+      <a class="btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> تواصل الآن
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 الاستثمار الأولى – جميع الحقوق محفوظة
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
