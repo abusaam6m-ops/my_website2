@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الاستثمار الأولى | خدمات تجارية وحكومية وزكوية في السعودية</title>
   <meta name="description" content="الاستثمار الأولى تقدم خدمات تجارية وبلدية وحكومية وزكوية وضريبية واستثمارية في السعودية بسرعة واحترافية، مع متابعة مباشرة عبر واتساب." />
-  <meta name="keywords" content="خدمات تجارية, خدمات حكومية, خدمات بلدية, الزكاة والضريبة, تأسيس شركات, رخص بلدية, خدمات استثمارية, السعودية" />
+  <meta name="keywords" content="خدمات تجارية, خدمات بلدية, خدمات حكومية, الزكاة والضريبة, تأسيس شركات, رخص بلدية, تراخيص استثمارية, خدمات أعمال" />
 
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
       --primary: #195cab;
       --secondary: #2bc58a;
-      --dark: #1f2937;
-      --light: #f8fafc;
-      --text: #374151;
+      --dark: #13304f;
+      --text: #333;
+      --muted: #666;
+      --bg: #f6f8fb;
       --white: #ffffff;
-      --border: #e5e7eb;
-      --shadow: 0 10px 25px rgba(0,0,0,0.08);
-      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --radius: 16px;
     }
 
     * {
@@ -31,10 +31,10 @@
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: var(--light);
+      background: var(--bg);
       color: var(--text);
       direction: rtl;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     a {
@@ -46,115 +46,122 @@
     }
 
     .container {
-      width: min(1150px, 92%);
+      width: min(1200px, 92%);
       margin: auto;
     }
 
     /* Header */
     header {
+      background: rgba(19, 48, 79, 0.95);
+      backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(25, 92, 171, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
     }
 
-    .nav {
+    .header-inner {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 16px;
       padding: 16px 0;
-      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .logo {
       color: var(--white);
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       font-weight: 800;
       white-space: nowrap;
     }
 
     nav {
       display: flex;
+      gap: 16px;
       flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-      justify-content: center;
     }
 
     nav a {
-      color: var(--white);
+      color: #fff;
       font-weight: 600;
-      font-size: 0.96rem;
+      font-size: 0.98rem;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #dff8ee;
+      color: #9ae7cb;
     }
 
-    .nav-btn {
-      background: var(--white);
-      color: var(--primary);
-      padding: 10px 16px;
+    .header-btn {
+      background: var(--secondary);
+      color: #fff;
+      padding: 10px 18px;
       border-radius: 10px;
       font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .header-btn:hover {
+      transform: translateY(-2px);
     }
 
     /* Hero */
     .hero {
       position: relative;
-      min-height: 88vh;
+      min-height: 85vh;
       display: flex;
       align-items: center;
       background:
-        linear-gradient(rgba(0,0,0,0.52), rgba(0,0,0,0.52)),
+        linear-gradient(rgba(10, 25, 45, 0.62), rgba(10, 25, 45, 0.62)),
         url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
-      color: var(--white);
+      color: #fff;
     }
 
     .hero-content {
       max-width: 760px;
-      padding: 60px 0;
+      text-align: center;
+      margin: auto;
+      padding: 40px 0;
     }
 
-    .badge {
+    .hero-badge {
       display: inline-block;
-      background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       padding: 8px 14px;
-      border-radius: 30px;
-      font-size: 0.9rem;
+      border-radius: 999px;
       margin-bottom: 18px;
+      font-size: 0.95rem;
     }
 
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.6rem);
-      margin: 0 0 16px;
-      line-height: 1.3;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.35;
+      margin: 0 0 14px;
       font-weight: 800;
     }
 
     .hero p {
-      font-size: 1.12rem;
-      margin: 0 0 24px;
-      color: #f3f4f6;
-      max-width: 700px;
+      font-size: 1.1rem;
+      color: #eef5ff;
+      max-width: 680px;
+      margin: 0 auto 24px;
     }
 
     .hero-buttons {
       display: flex;
-      gap: 14px;
+      justify-content: center;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 14px 22px;
+      gap: 8px;
+      padding: 14px 24px;
       border-radius: 12px;
       font-weight: 700;
       transition: 0.3s ease;
@@ -162,54 +169,47 @@
 
     .btn-primary {
       background: var(--secondary);
-      color: var(--white);
+      color: #fff;
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      opacity: 0.95;
+      box-shadow: 0 8px 18px rgba(43, 197, 138, 0.28);
     }
 
     .btn-outline {
-      border: 1px solid rgba(255,255,255,0.8);
-      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      color: #fff;
       background: transparent;
     }
 
     .btn-outline:hover {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.08);
     }
 
     .hero-stats {
       display: grid;
-      grid-template-columns: repeat(3, minmax(120px, 1fr));
-      gap: 16px;
-      max-width: 650px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
     }
 
-    .stat {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.15);
-      padding: 18px;
-      border-radius: 16px;
-      text-align: center;
+    .stat-box {
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      padding: 16px;
     }
 
-    .stat h3 {
-      margin: 0;
-      font-size: 1.4rem;
-      color: var(--white);
+    .stat-box strong {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 4px;
     }
 
-    .stat p {
-      margin: 6px 0 0;
-      font-size: 0.95rem;
-      color: #e5e7eb;
-    }
-
-    /* General sections */
+    /* Sections */
     section {
-      padding: 80px 0;
+      padding: 70px 0;
     }
 
     .section-title {
@@ -220,14 +220,14 @@
       font-weight: 800;
     }
 
-    .section-desc {
+    .section-subtitle {
       text-align: center;
-      max-width: 700px;
+      color: var(--muted);
+      max-width: 720px;
       margin: 0 auto 40px;
-      color: #6b7280;
     }
 
-    /* Why us */
+    /* Features */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -236,221 +236,235 @@
 
     .feature-card {
       background: var(--white);
-      padding: 28px 20px;
+      padding: 28px 22px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       text-align: center;
-      border: 1px solid #eef2f7;
+      transition: 0.3s;
     }
 
-    .feature-card i {
-      font-size: 2rem;
-      color: var(--secondary);
-      margin-bottom: 14px;
+    .feature-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .feature-icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      font-size: 1.4rem;
     }
 
     .feature-card h3 {
-      margin: 0 0 10px;
+      margin: 0 0 8px;
       color: var(--dark);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
     }
 
     .feature-card p {
       margin: 0;
-      color: #6b7280;
+      color: var(--muted);
       font-size: 0.95rem;
     }
 
-    /* Services */
-    .services-section {
-      background: #f1f5f9;
-    }
-
+    /* Service Categories */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
     }
 
-    .service-card {
+    .service-category {
       background: var(--white);
-      padding: 26px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      border: 1px solid #edf2f7;
-      transition: 0.3s;
+      padding: 24px;
     }
 
-    .service-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .service-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--white);
+    .service-category h3 {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 16px;
+      gap: 10px;
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.25rem;
     }
 
-    .service-card h3 {
-      margin: 0 0 10px;
-      color: var(--dark);
-      font-size: 1.2rem;
-    }
-
-    .service-card p {
-      color: #6b7280;
-      font-size: 0.96rem;
-      margin-bottom: 18px;
-    }
-
-    .service-list {
+    .service-category ul {
       list-style: none;
       padding: 0;
-      margin: 0 0 18px;
+      margin: 16px 0 0;
     }
 
-    .service-list li {
-      padding: 6px 0;
-      border-bottom: 1px dashed #e5e7eb;
-      font-size: 0.95rem;
+    .service-category li {
+      border-bottom: 1px dashed #e7e7e7;
+      padding: 11px 0;
     }
 
-    .service-list li:last-child {
-      border-bottom: none;
+    .service-category li:last-child {
+      border-bottom: 0;
     }
 
-    .service-link {
-      display: inline-block;
+    .service-category a {
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .service-category a:hover {
       color: var(--primary);
-      font-weight: 700;
+      padding-right: 6px;
     }
 
-    /* Highlight */
-    .highlight {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--white);
-      border-radius: 24px;
-      padding: 40px;
+    .mini-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      background: #f4f8ff;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+
+    /* Process */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step-card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px 20px;
       text-align: center;
+      position: relative;
     }
 
-    .highlight h2 {
-      margin: 0 0 12px;
-      font-size: 2rem;
-    }
-
-    .highlight p {
-      margin: 0 auto 24px;
-      max-width: 700px;
-      color: #eefdf7;
+    .step-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 14px;
     }
 
     /* Testimonials */
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 20px;
     }
 
     .testimonial-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 24px;
       box-shadow: var(--shadow);
-      border: 1px solid #eef2f7;
-    }
-
-    .testimonial-card .stars {
-      color: #f59e0b;
-      margin-bottom: 12px;
+      padding: 24px;
     }
 
     .testimonial-card p {
-      margin: 0 0 16px;
-      color: #4b5563;
+      color: var(--muted);
+      margin-bottom: 14px;
     }
 
-    .testimonial-card strong {
+    .stars {
+      color: #f3b400;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-name {
+      font-weight: 800;
       color: var(--dark);
     }
 
-    /* Contact */
-    .contact-section {
-      background: #0f172a;
-      color: var(--white);
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      border-radius: 24px;
+      padding: 40px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
     }
 
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 30px;
-      align-items: start;
-    }
-
-    .contact-box,
-    .contact-info {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      padding: 28px;
-    }
-
-    .contact-box h2,
-    .contact-info h3 {
+    .cta h2 {
       margin-top: 0;
-      color: var(--white);
+      font-size: 2rem;
     }
 
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0 0;
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 22px;
+      color: #eefbff;
     }
 
-    .contact-list li {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      margin-bottom: 16px;
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
     }
 
-    .contact-list i {
-      color: var(--secondary);
-      margin-top: 6px;
+    .contact-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      text-align: center;
     }
 
-    .contact-list a {
-      color: #d1fae5;
+    .contact-card i {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 12px;
     }
 
-    .contact-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 20px;
+    .contact-card h3 {
+      margin: 0 0 8px;
+      color: var(--dark);
+    }
+
+    .contact-card a,
+    .contact-card p {
+      color: var(--muted);
+      margin: 0;
+      word-break: break-word;
     }
 
     /* Footer */
     footer {
-      background: #020617;
-      color: #cbd5e1;
+      background: #10263d;
+      color: #cbd7e5;
+      margin-top: 60px;
+    }
+
+    .footer-inner {
+      padding: 26px 0;
       text-align: center;
-      padding: 20px;
       font-size: 0.95rem;
     }
 
     /* WhatsApp Float */
     .whatsapp-float {
       position: fixed;
-      bottom: 20px;
       left: 20px;
+      bottom: 20px;
       width: 58px;
       height: 58px;
       border-radius: 50%;
@@ -460,64 +474,79 @@
       align-items: center;
       justify-content: center;
       font-size: 1.7rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.22);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
       z-index: 2000;
+      transition: 0.3s;
     }
 
     .whatsapp-float:hover {
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
 
     /* Responsive */
     @media (max-width: 992px) {
       .features-grid,
-      .services-grid,
+      .steps-grid,
       .testimonials-grid,
-      .contact-wrapper {
+      .contact-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero-stats {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 768px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
+      .header-inner {
+        justify-content: center;
       }
 
       nav {
-        width: 100%;
-        justify-content: flex-start;
+        justify-content: center;
       }
 
       .hero {
         min-height: auto;
-        padding: 70px 0;
+        padding: 80px 0 60px;
       }
 
-      .hero-stats,
-      .features-grid,
-      .services-grid,
-      .testimonials-grid,
-      .contact-wrapper {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-buttons,
-      .contact-buttons {
-        flex-direction: column;
-      }
-
-      .btn,
-      .nav-btn {
-        width: fit-content;
+      .hero h1 {
+        font-size: 2rem;
       }
 
       .section-title {
         font-size: 1.7rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .features-grid,
+      .steps-grid,
+      .testimonials-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+      }
+
+      nav a {
+        font-size: 0.93rem;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
       }
     }
   </style>
@@ -525,196 +554,214 @@
 <body>
 
   <header>
-    <div class="container nav">
+    <div class="container header-inner">
       <div class="logo">الاستثمار الأولى</div>
+
       <nav>
-        <a href="#about">لماذا نحن</a>
-        <a href="#services">خدماتنا</a>
+        <a href="#services">الخدمات</a>
+        <a href="#features">لماذا نحن</a>
+        <a href="#steps">طريقة العمل</a>
         <a href="#testimonials">آراء العملاء</a>
         <a href="#contact">اتصل بنا</a>
-        <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer" class="nav-btn">واتساب</a>
       </nav>
+
+      <a class="header-btn" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i>
+        تواصل الآن
+      </a>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <span class="badge">خدمات تجارية وحكومية واستثمارية في السعودية</span>
+        <div class="hero-badge">خدمات أعمال وتجارية وحكومية في السعودية</div>
         <h1>ننجز معاملاتك التجارية والحكومية بسرعة واحترافية</h1>
         <p>
-          نقدم لك خدمات السجل التجاري، البلدية، الزكاة والضريبة، الخدمات الحكومية، والخدمات الاستثمارية
-          في مكان واحد، مع متابعة مباشرة وسريعة عبر واتساب.
+          نوفر لك خدمات السجل التجاري، البلدية، الزكاة والضريبة، التأشيرات، والتراخيص الاستثمارية
+          في مكان واحد، مع متابعة مباشرة وسهلة عبر واتساب.
         </p>
 
         <div class="hero-buttons">
-          <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            <i class="fab fa-whatsapp"></i> اطلب الخدمة الآن
+          <a class="btn btn-primary" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            اطلب الخدمة الآن
           </a>
-          <a href="#services" class="btn btn-outline">
-            <i class="fa-solid fa-briefcase"></i> استعرض الخدمات
+          <a class="btn btn-outline" href="#services">
+            <i class="fa-solid fa-layer-group"></i>
+            استعرض الخدمات
           </a>
         </div>
 
         <div class="hero-stats">
-          <div class="stat">
-            <h3>+150</h3>
-            <p>خدمة متنوعة</p>
+          <div class="stat-box">
+            <strong>+100</strong>
+            خدمات متنوعة للأفراد والمنشآت
           </div>
-          <div class="stat">
-            <h3>سريع</h3>
-            <p>في متابعة الطلبات</p>
+          <div class="stat-box">
+            <strong>سرعة</strong>
+            متابعة مباشرة وإنجاز منظم للطلبات
           </div>
-          <div class="stat">
-            <h3>مباشر</h3>
-            <p>تواصل عبر واتساب</p>
+          <div class="stat-box">
+            <strong>دعم مباشر</strong>
+            تواصل سريع عبر واتساب والهاتف
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about">
+  <section id="features">
     <div class="container">
       <h2 class="section-title">لماذا تختار الاستثمار الأولى؟</h2>
-      <p class="section-desc">
-        نوفر لك تجربة أسهل وأسرع لإنجاز معاملاتك، مع متابعة واضحة وخدمة مباشرة تناسب الأفراد ورواد الأعمال والمنشآت.
+      <p class="section-subtitle">
+        نركز على تسهيل الإجراءات وتوفير تجربة مريحة وواضحة للعميل، من أول استفسار حتى إتمام الخدمة.
       </p>
 
       <div class="features-grid">
         <div class="feature-card">
-          <i class="fa-solid fa-bolt"></i>
+          <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
           <h3>سرعة في الإنجاز</h3>
-          <p>نتابع طلبك بسرعة ونختصر عليك الوقت والجهد في الإجراءات.</p>
+          <p>تنفيذ المعاملات ومتابعتها بأسرع وقت ممكن وبخطوات واضحة.</p>
         </div>
 
         <div class="feature-card">
-          <i class="fa-brands fa-whatsapp"></i>
+          <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
           <h3>متابعة مباشرة</h3>
-          <p>تواصل سريع وسهل عبر واتساب للرد على الاستفسارات ومتابعة الطلب.</p>
+          <p>تواصل سهل عبر واتساب للرد على الاستفسارات وتحديث حالة الطلب.</p>
         </div>
 
         <div class="feature-card">
-          <i class="fa-solid fa-layer-group"></i>
-          <h3>خدمات متنوعة</h3>
-          <p>من الخدمات التجارية إلى الحكومية والزكوية والاستثمارية في مكان واحد.</p>
+          <div class="feature-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>تنوع في الخدمات</h3>
+          <p>من الخدمات التجارية والبلدية إلى الزكوية والاستثمارية في مكان واحد.</p>
         </div>
 
         <div class="feature-card">
-          <i class="fa-solid fa-shield-halved"></i>
-          <h3>موثوقية واحترافية</h3>
-          <p>نهتم بتقديم خدمة واضحة ومنظمة تساعد العميل على اتخاذ القرار بسرعة.</p>
+          <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>احترافية ووضوح</h3>
+          <p>تنظيم أفضل للمعلومات والخدمات لتسهيل اختيار الخدمة المناسبة.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="services-section" id="services">
+  <section id="services">
     <div class="container">
-      <h2 class="section-title">أهم خدماتنا</h2>
-      <p class="section-desc">
-        اختر القسم المناسب لك، ثم تواصل معنا مباشرة لبدء الخدمة.
+      <h2 class="section-title">أهم الخدمات</h2>
+      <p class="section-subtitle">
+        هذه أبرز الفئات التي نقدمها. ويمكنك لاحقاً إنشاء صفحة مستقلة لكل خدمة مهمة لرفع الثقة وتحسين الظهور في جوجل.
       </p>
 
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-building"></i></div>
-          <h3>الخدمات التجارية</h3>
-          <p>خدمات تأسيس الشركات والسجل التجاري والتعديلات والاشتراكات التجارية.</p>
-          <ul class="service-list">
-            <li>تأسيس شركة ذات مسؤولية محدودة</li>
-            <li>قيد سجل تجاري لمؤسسة فردية</li>
-            <li>حجز اسم تجاري</li>
-            <li>تعديل بيانات السجل التجاري</li>
-            <li>إصدار وتجديد اشتراك الغرفة التجارية</li>
+
+        <div class="service-category">
+          <h3><i class="fa-solid fa-building"></i> الخدمات التجارية</h3>
+          <ul>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">تأسيس شركة ذات مسؤولية محدودة <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">حجز اسم تجاري <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">تعديل عقد التأسيس <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار اشتراك الغرفة التجارية <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إيداع القوائم المالية <i class="fa-solid fa-arrow-left"></i></a></li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">اطلب الخدمة</a>
+          <div class="mini-note">يمكنك إضافة صفحة مستقلة لكل خدمة لشرح المتطلبات والمدة والتكلفة التقديرية.</div>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-city"></i></div>
-          <h3>خدمات البلدية</h3>
-          <p>إصدار وتجديد وتعديل الرخص التجارية والتصاريح البلدية والاعتراضات.</p>
-          <ul class="service-list">
-            <li>إصدار رخصة تجارية</li>
-            <li>تجديد رخصة تجارية</li>
-            <li>تعديل رخصة نشاط تجاري</li>
-            <li>نقل ملكية رخصة تجارية</li>
-            <li>إصدار تقرير فني وترخيص سلامة</li>
+        <div class="service-category">
+          <h3><i class="fa-solid fa-city"></i> خدمات البلدية</h3>
+          <ul>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار رخصة تجارية <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">تجديد رخصة تجارية <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">تعديل رخصة نشاط تجاري <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">نقل ملكية رخصة تجارية <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار تقرير فني وسلامة <i class="fa-solid fa-arrow-left"></i></a></li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">اطلب الخدمة</a>
+          <div class="mini-note">اعرض فقط أهم الخدمات في الصفحة الرئيسية، وضع الباقي في صفحة منفصلة أو صفحة "جميع الخدمات".</div>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-landmark"></i></div>
-          <h3>الخدمات الحكومية</h3>
-          <p>خدمات التأشيرات والعمل والتأمينات والعقود ونقل الموظفين وحل المشكلات النظامية.</p>
-          <ul class="service-list">
-            <li>إصدار تأشيرة عمل</li>
-            <li>إصدار رخصة عمل</li>
-            <li>إنشاء عقود العمل</li>
-            <li>تسجيل موظف في التأمينات</li>
-            <li>تسوية ودية بين العامل وصاحب العمل</li>
+        <div class="service-category">
+          <h3><i class="fa-solid fa-landmark"></i> الخدمات الحكومية</h3>
+          <ul>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار تأشيرة عمل <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار رخصة عمل <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">نقل عامل من مؤسسة إلى مؤسسة <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إنشاء عقود العمل للموظفين <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">الاعتراض على مخالفة التأمينات <i class="fa-solid fa-arrow-left"></i></a></li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">اطلب الخدمة</a>
+          <div class="mini-note">وجود وصف مختصر لكل خدمة يزيد من احتمالية تواصل العميل لأنه يفهم المطلوب بسرعة.</div>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-          <h3>الخدمات الزكوية والضريبية</h3>
-          <p>تسجيل وإقرارات الزكاة وضريبة القيمة المضافة والاعتراضات والشهادات الضريبية.</p>
-          <ul class="service-list">
-            <li>التسجيل في الزكاة</li>
-            <li>تقديم الإقرار الزكوي</li>
-            <li>التسجيل في ضريبة القيمة المضافة</li>
-            <li>تقديم إقرار ضريبة القيمة المضافة</li>
-            <li>طلب اعتراض على غرامة</li>
+        <div class="service-category">
+          <h3><i class="fa-solid fa-file-invoice-dollar"></i> الخدمات الزكوية والضريبية</h3>
+          <ul>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">التسجيل في الزكاة والضريبة <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">تقديم الإقرار الزكوي <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">التسجيل في ضريبة القيمة المضافة <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">تقديم إقرار ضريبة القيمة المضافة <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">طلب اعتراض على غرامة <i class="fa-solid fa-arrow-left"></i></a></li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">اطلب الخدمة</a>
+          <div class="mini-note">هذا القسم مهم جداً لمحركات البحث، لذلك الأفضل عمل صفحات منفصلة لكل خدمة ضريبية رئيسية.</div>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-          <h3>الخدمات الاستثمارية</h3>
-          <p>خدمات التراخيص الاستثمارية وتأسيس الشركات الأجنبية وتجديد تراخيص الاستثمار.</p>
-          <ul class="service-list">
-            <li>إصدار ترخيص استثماري</li>
-            <li>إصدار ترخيص استثماري لمقيم</li>
-            <li>إصدار ترخيص استثماري لغير المقيم</li>
-            <li>إنشاء شركة أجنبية</li>
-            <li>تجديد ترخيص الاستثمار</li>
+        <div class="service-category">
+          <h3><i class="fa-solid fa-chart-line"></i> الخدمات الاستثمارية</h3>
+          <ul>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار ترخيص استثماري <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار ترخيص استثماري لمقيم <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار ترخيص استثماري لغير المقيم <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إنشاء شركة أجنبية <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">تجديد ترخيص الاستثمار <i class="fa-solid fa-arrow-left"></i></a></li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">اطلب الخدمة</a>
+          <div class="mini-note">يمكن تخصيص صفحة احترافية لهذا القسم لأنه يجذب عملاء ذوي قيمة أعلى.</div>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
-          <h3>استشارة واختيار الخدمة</h3>
-          <p>إذا لم تكن متأكداً من الخدمة المناسبة، تواصل معنا وسنوجهك للخيار الصحيح حسب حالتك.</p>
-          <ul class="service-list">
-            <li>استشارة أولية</li>
-            <li>تحديد المتطلبات</li>
-            <li>توضيح خطوات الإجراء</li>
-            <li>متابعة عبر واتساب</li>
-            <li>بدء الطلب مباشرة</li>
+        <div class="service-category">
+          <h3><i class="fa-solid fa-star"></i> خدمات مطلوبة بشكل متكرر</h3>
+          <ul>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">تأسيس شركة <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار سجل تجاري <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار رخصة بلدية <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">التسجيل في القيمة المضافة <i class="fa-solid fa-arrow-left"></i></a></li>
+            <li><a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">إصدار تأشيرة عمل <i class="fa-solid fa-arrow-left"></i></a></li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">احصل على استشارة</a>
+          <div class="mini-note">هذا القسم ممتاز في أعلى الموقع إذا أردت توجيه العميل لأهم الخدمات مباشرة.</div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="steps">
     <div class="container">
-      <div class="highlight">
-        <h2>هل تحتاج خدمة غير موجودة في القائمة؟</h2>
-        <p>
-          لدينا مجموعة كبيرة من الخدمات الإضافية. راسلنا مباشرة عبر واتساب واذكر نوع الخدمة أو المشكلة،
-          وسنرد عليك بالتفاصيل والمتطلبات.
-        </p>
-        <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <i class="fab fa-whatsapp"></i> تواصل الآن
-        </a>
+      <h2 class="section-title">طريقة العمل</h2>
+      <p class="section-subtitle">
+        خطوات بسيطة وواضحة لتسهيل طلب الخدمة من البداية حتى الإنجاز.
+      </p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>تواصل معنا</h3>
+          <p>أرسل لنا الخدمة المطلوبة أو استفسارك عبر واتساب أو الهاتف.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>تحديد المتطلبات</h3>
+          <p>نوضح لك الأوراق أو البيانات المطلوبة ونحدد الإجراء المناسب.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>بدء التنفيذ</h3>
+          <p>نبدأ في تنفيذ الطلب ومتابعة المعاملة حسب نوع الخدمة.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>إتمام الخدمة</h3>
+          <p>نرسل لك التحديثات ونكمل المعاملة حتى الانتهاء بإذن الله.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -722,97 +769,84 @@
   <section id="testimonials">
     <div class="container">
       <h2 class="section-title">آراء العملاء</h2>
-      <p class="section-desc">
-        يمكنك لاحقاً استبدال هذه النصوص بآراء حقيقية من عملائك.
+      <p class="section-subtitle">
+        يمكنك لاحقاً استبدال هذه الآراء بآراء حقيقية من عملائك أو صور تقييمات واتساب.
       </p>
 
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p>تم إنجاز الخدمة بسرعة وكان التواصل واضحاً وسهلاً من البداية حتى الانتهاء.</p>
-          <strong>عميل أعمال</strong>
+          <p>تم إنهاء إجراءاتنا بسرعة وتعامل ممتاز وواضح من البداية للنهاية.</p>
+          <div class="testimonial-name">عميل قطاع أعمال</div>
         </div>
 
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p>خدمة ممتازة ومتابعة مباشرة عبر واتساب، وتم توضيح المطلوب بدقة.</p>
-          <strong>صاحب منشأة</strong>
+          <p>سهولة في التواصل وسرعة في الرد، وتم توضيح المتطلبات بشكل مرتب جداً.</p>
+          <div class="testimonial-name">صاحب منشأة</div>
         </div>
 
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p>تجربة مريحة وسريعة، خصوصاً في الخدمات التجارية والتعامل الاحترافي.</p>
-          <strong>رائد أعمال</strong>
+          <p>خدمة ممتازة ومتابعة احترافية، وأنصح بالتعامل معهم في الخدمات التجارية.</p>
+          <div class="testimonial-name">رائد أعمال</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="contact-section" id="contact">
+  <section>
     <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-box">
-          <h2>تواصل معنا الآن</h2>
-          <p>
-            نحن جاهزون لمساعدتك في اختيار الخدمة المناسبة وبدء الإجراءات بسرعة.
-          </p>
+      <div class="cta">
+        <h2>هل تحتاج مساعدة في اختيار الخدمة المناسبة؟</h2>
+        <p>
+          تواصل معنا الآن وسنساعدك في تحديد الخدمة المناسبة لك وشرح المتطلبات وطريقة البدء بشكل واضح وسريع.
+        </p>
+        <a class="btn btn-primary" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i>
+          راسلنا على واتساب
+        </a>
+      </div>
+    </div>
+  </section>
 
-          <ul class="contact-list">
-            <li>
-              <i class="fa-brands fa-whatsapp"></i>
-              <div>
-                <strong>واتساب</strong><br>
-                <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">0539530566</a>
-              </div>
-            </li>
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">تواصل معنا</h2>
+      <p class="section-subtitle">
+        يفضل استخدام بريد رسمي باسم النطاق لاحقاً مثل: info@go-ksa.net
+      </p>
 
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <div>
-                <strong>الهاتف</strong><br>
-                <a href="tel:0539530566">0539530566</a>
-              </div>
-            </li>
-
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <div>
-                <strong>البريد الإلكتروني</strong><br>
-                <a href="mailto:info@go-ksa.net">info@go-ksa.net</a>
-              </div>
-            </li>
-          </ul>
-
-          <div class="contact-buttons">
-            <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <i class="fab fa-whatsapp"></i> راسلنا على واتساب
-            </a>
-            <a href="tel:0539530566" class="btn btn-outline">
-              <i class="fa-solid fa-phone"></i> اتصل الآن
-            </a>
-          </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <i class="fa-brands fa-whatsapp"></i>
+          <h3>واتساب</h3>
+          <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">0539530566</a>
         </div>
 
-        <div class="contact-info">
-          <h3>ملاحظات مهمة</h3>
-          <p>لظهورك بشكل احترافي أكثر، أنصحك بتطبيق هذه التعديلات بعد رفع الصفحة:</p>
-          <ul>
-            <li>استخدم بريداً رسمياً باسم النطاق بدل Gmail.</li>
-            <li>أنشئ صفحة مستقلة لكل خدمة مهمة لاحقاً.</li>
-            <li>أضف أسعاراً ابتدائية أو مدة إنجاز تقريبية.</li>
-            <li>أضف آراء عملاء حقيقية وشعارات الجهات التي تعاملت معها.</li>
-          </ul>
+        <div class="contact-card">
+          <i class="fa-solid fa-phone"></i>
+          <h3>الهاتف</h3>
+          <p>0539530566</p>
+        </div>
+
+        <div class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <h3>البريد الإلكتروني</h3>
+          <a href="mailto:F2024ali22@gmail.com">F2024ali22@gmail.com</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2026 الاستثمار الأولى – جميع الحقوق محفوظة
+    <div class="container footer-inner">
+      © 2026 الاستثمار الأولى – جميع الحقوق محفوظة
+    </div>
   </footer>
 
-  <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="تواصل عبر واتساب">
-    <i class="fab fa-whatsapp"></i>
+  <a class="whatsapp-float" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer" aria-label="واتساب">
+    <i class="fa-brands fa-whatsapp"></i>
   </a>
 
 </body>
