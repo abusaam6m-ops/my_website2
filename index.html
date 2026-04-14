@@ -23,10 +23,7 @@
       --radius: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -37,20 +34,9 @@
       line-height: 1.7;
     }
 
-    a {
-      text-decoration: none;
-    }
+    a { text-decoration: none; }
+    .container { width: min(1150px, 92%); margin: auto; }
 
-    img {
-      max-width: 100%;
-    }
-
-    .container {
-      width: min(1150px, 92%);
-      margin: auto;
-    }
-
-    /* Header */
     header {
       position: sticky;
       top: 0;
@@ -90,9 +76,7 @@
       transition: 0.3s;
     }
 
-    nav a:hover {
-      color: #dff8ee;
-    }
+    nav a:hover { color: #dff8ee; }
 
     .nav-btn {
       background: var(--white);
@@ -102,7 +86,6 @@
       font-weight: 700;
     }
 
-    /* Hero */
     .hero {
       position: relative;
       min-height: 88vh;
@@ -165,10 +148,7 @@
       color: var(--white);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
-    }
+    .btn-primary:hover { transform: translateY(-2px); opacity: 0.95; }
 
     .btn-outline {
       border: 1px solid rgba(255,255,255,0.8);
@@ -176,9 +156,7 @@
       background: transparent;
     }
 
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.08);
-    }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); }
 
     .hero-stats {
       display: grid;
@@ -207,10 +185,7 @@
       color: #e5e7eb;
     }
 
-    /* General sections */
-    section {
-      padding: 80px 0;
-    }
+    section { padding: 80px 0; }
 
     .section-title {
       text-align: center;
@@ -227,7 +202,6 @@
       color: #6b7280;
     }
 
-    /* Why us */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -261,10 +235,7 @@
       font-size: 0.95rem;
     }
 
-    /* Services */
-    .services-section {
-      background: #f1f5f9;
-    }
+    .services-section { background: #f1f5f9; }
 
     .services-grid {
       display: grid;
@@ -281,9 +252,7 @@
       transition: 0.3s;
     }
 
-    .service-card:hover {
-      transform: translateY(-6px);
-    }
+    .service-card:hover { transform: translateY(-6px); }
 
     .service-icon {
       width: 58px;
@@ -322,17 +291,15 @@
       font-size: 0.95rem;
     }
 
-    .service-list li:last-child {
-      border-bottom: none;
-    }
+    .service-list li:last-child { border-bottom: none; }
 
     .service-link {
       display: inline-block;
       color: var(--primary);
       font-weight: 700;
+      margin-left: 10px;
     }
 
-    /* Highlight */
     .highlight {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--white);
@@ -352,7 +319,6 @@
       color: #eefdf7;
     }
 
-    /* Testimonials */
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -367,21 +333,10 @@
       border: 1px solid #eef2f7;
     }
 
-    .testimonial-card .stars {
-      color: #f59e0b;
-      margin-bottom: 12px;
-    }
+    .testimonial-card .stars { color: #f59e0b; margin-bottom: 12px; }
+    .testimonial-card p { margin: 0 0 16px; color: #4b5563; }
+    .testimonial-card strong { color: var(--dark); }
 
-    .testimonial-card p {
-      margin: 0 0 16px;
-      color: #4b5563;
-    }
-
-    .testimonial-card strong {
-      color: var(--dark);
-    }
-
-    /* Contact */
     .contact-section {
       background: #0f172a;
       color: var(--white);
@@ -426,9 +381,7 @@
       margin-top: 6px;
     }
 
-    .contact-list a {
-      color: #d1fae5;
-    }
+    .contact-list a { color: #d1fae5; }
 
     .contact-buttons {
       display: flex;
@@ -437,7 +390,6 @@
       margin-top: 20px;
     }
 
-    /* Footer */
     footer {
       background: #020617;
       color: #cbd5e1;
@@ -446,7 +398,6 @@
       font-size: 0.95rem;
     }
 
-    /* WhatsApp Float */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -464,11 +415,8 @@
       z-index: 2000;
     }
 
-    .whatsapp-float:hover {
-      transform: scale(1.05);
-    }
+    .whatsapp-float:hover { transform: scale(1.05); }
 
-    /* Responsive */
     @media (max-width: 992px) {
       .features-grid,
       .services-grid,
@@ -477,27 +425,13 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .hero-stats {
-        grid-template-columns: repeat(3, 1fr);
-      }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
     }
 
     @media (max-width: 768px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 70px 0;
-      }
-
+      .nav { flex-direction: column; align-items: flex-start; }
+      nav { width: 100%; justify-content: flex-start; }
+      .hero { min-height: auto; padding: 70px 0; }
       .hero-stats,
       .features-grid,
       .services-grid,
@@ -511,14 +445,7 @@
         flex-direction: column;
       }
 
-      .btn,
-      .nav-btn {
-        width: fit-content;
-      }
-
-      .section-title {
-        font-size: 1.7rem;
-      }
+      .section-title { font-size: 1.7rem; }
     }
   </style>
 </head>
@@ -532,7 +459,7 @@
         <a href="#services">خدماتنا</a>
         <a href="#testimonials">آراء العملاء</a>
         <a href="#contact">اتصل بنا</a>
-        <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer" class="nav-btn">واتساب</a>
+        <a href="services.html" class="nav-btn">جميع الخدمات</a>
       </nav>
     </div>
   </header>
@@ -551,8 +478,9 @@
           <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             <i class="fab fa-whatsapp"></i> اطلب الخدمة الآن
           </a>
-          <a href="services.html" class="btn btn-outline">عرض جميع الخدمات</a>
-            <i class="fa-solid fa-briefcase"></i> استعرض الخدمات
+
+          <a href="services.html" class="btn btn-outline">
+            <i class="fa-solid fa-list"></i> عرض جميع الخدمات
           </a>
         </div>
 
@@ -612,9 +540,7 @@
   <section class="services-section" id="services">
     <div class="container">
       <h2 class="section-title">أهم خدماتنا</h2>
-      <p class="section-desc">
-        اختر القسم المناسب لك، ثم تواصل معنا مباشرة لبدء الخدمة.
-      </p>
+      <p class="section-desc">اختر القسم المناسب لك، ثم تواصل معنا مباشرة لبدء الخدمة.</p>
 
       <div class="services-grid">
         <div class="service-card">
@@ -628,7 +554,8 @@
             <li>تعديل بيانات السجل التجاري</li>
             <li>إصدار وتجديد اشتراك الغرفة التجارية</li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">اطلب الخدمة</a>
+          <a class="service-link" href="company.html">تفاصيل تأسيس الشركات</a>
+          <a class="service-link" href="services.html">عرض المزيد</a>
         </div>
 
         <div class="service-card">
@@ -642,7 +569,8 @@
             <li>نقل ملكية رخصة تجارية</li>
             <li>إصدار تقرير فني وترخيص سلامة</li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">اطلب الخدمة</a>
+          <a class="service-link" href="municipal-license.html">تفاصيل الرخص البلدية</a>
+          <a class="service-link" href="services.html">عرض المزيد</a>
         </div>
 
         <div class="service-card">
@@ -656,7 +584,8 @@
             <li>تسجيل موظف في التأمينات</li>
             <li>تسوية ودية بين العامل وصاحب العمل</li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">اطلب الخدمة</a>
+          <a class="service-link" href="visa-work.html">تفاصيل التأشيرات والعمل</a>
+          <a class="service-link" href="services.html">عرض المزيد</a>
         </div>
 
         <div class="service-card">
@@ -670,7 +599,8 @@
             <li>تقديم إقرار ضريبة القيمة المضافة</li>
             <li>طلب اعتراض على غرامة</li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">اطلب الخدمة</a>
+          <a class="service-link" href="vat.html">تفاصيل ضريبة القيمة المضافة</a>
+          <a class="service-link" href="services.html">عرض المزيد</a>
         </div>
 
         <div class="service-card">
@@ -684,7 +614,8 @@
             <li>إنشاء شركة أجنبية</li>
             <li>تجديد ترخيص الاستثمار</li>
           </ul>
-          <a class="service-link" href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer">اطلب الخدمة</a>
+          <a class="service-link" href="investment-license.html">تفاصيل الترخيص الاستثماري</a>
+          <a class="service-link" href="services.html">عرض المزيد</a>
         </div>
 
         <div class="service-card">
@@ -722,9 +653,7 @@
   <section id="testimonials">
     <div class="container">
       <h2 class="section-title">آراء العملاء</h2>
-      <p class="section-desc">
-        يمكنك لاحقاً استبدال هذه النصوص بآراء حقيقية من عملائك.
-      </p>
+      <p class="section-desc">يمكنك لاحقاً استبدال هذه النصوص بآراء حقيقية من عملائك.</p>
 
       <div class="testimonials-grid">
         <div class="testimonial-card">
@@ -753,9 +682,7 @@
       <div class="contact-wrapper">
         <div class="contact-box">
           <h2>تواصل معنا الآن</h2>
-          <p>
-            نحن جاهزون لمساعدتك في اختيار الخدمة المناسبة وبدء الإجراءات بسرعة.
-          </p>
+          <p>نحن جاهزون لمساعدتك في اختيار الخدمة المناسبة وبدء الإجراءات بسرعة.</p>
 
           <ul class="contact-list">
             <li>
@@ -787,9 +714,6 @@
             <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
               <i class="fab fa-whatsapp"></i> راسلنا على واتساب
             </a>
-            <a href="tel:0539530566" class="btn btn-outline">
-              <i class="fa-solid fa-phone"></i> اتصل الآن
-            </a>
           </div>
         </div>
 
@@ -807,9 +731,7 @@
     </div>
   </section>
 
-  <footer>
-    © 2026 الاستثمار الأولى – جميع الحقوق محفوظة
-  </footer>
+  <footer>© 2026 الاستثمار الأولى – جميع الحقوق محفوظة</footer>
 
   <a href="https://wa.me/966539530566" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="تواصل عبر واتساب">
     <i class="fab fa-whatsapp"></i>
